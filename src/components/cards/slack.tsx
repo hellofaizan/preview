@@ -9,7 +9,7 @@ export default function Slack({ data }: { data: any }) {
   return (
     <div className="flex flex-col gap-4 w-full overflow-hidden">
       {/* app name */}
-      <div className="flex items-center gap-1 rounded-lg border bg-white w-max text-sm p-1 px-3 bg-muted/35">
+      <div className="flex items-center gap-1 rounded-lg border w-max text-sm p-1 px-3 bg-muted/35">
         <IconBrandSlack size={16} />
         Slack
       </div>
@@ -31,7 +31,7 @@ export default function Slack({ data }: { data: any }) {
             <div className="flex-1">
               {/* User name and timestamp */}
               <div className="flex items-baseline gap-2">
-                <span className="font-bold text-gray-900">Olivia Watkins</span>
+                <span className="font-bold">Olivia Watkins</span>
                 <span className="text-sm text-gray-500">10:18 AM</span>
               </div>
 
@@ -39,10 +39,10 @@ export default function Slack({ data }: { data: any }) {
               <p className="text-[#1264A3] hover:underline">{data.url}</p>
 
               {/* Link preview card */}
-              <div className="mt-2 border rounded-lg overflow-hidden max-w-2xl">
+              <div className="mt-2 border dark:bg-muted w-[80%] rounded-lg overflow-hidden max-w-2xl">
                 {/* Card header */}
-                <div className="p-4 border-b">
-                  <div className="flex items-center gap-3">
+                <div className="p-2 px-3 border-b">
+                  <div className="flex items-center gap-2">
                     <div className="w-8 h-8">
                       <img
                         src={data.icon}
@@ -52,10 +52,10 @@ export default function Slack({ data }: { data: any }) {
                     </div>
                     <span className="text-lg">{username}</span>
                   </div>
-                  <h2 className="text-xl font-bold text-[#1264A3] mt-2">
+                  <h2 className="text-lg font-bold text-[#1264A3] dark:text-[#4c9fde] mt-2">
                     {data.title}
                   </h2>
-                  <p className="text-gray-700 mt-1">{data.description}</p>
+                  <p className="text-gray-700 text-sm dark:text-muted-foreground mt-1">{data.description}</p>
                 </div>
 
                 {/* Preview image */}

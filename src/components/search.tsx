@@ -46,12 +46,12 @@ export default function SearchBar() {
         <input
           type="text"
           placeholder="https://mohammadfaizan.in"
-          className="w-full rounded-lg border p-2 px-3 focus:border-muted-foreground focus:outline-none flex-1"
+          className="h-12 rounded-lg border p-2 px-3 focus:border-muted-foreground focus:outline-none flex-1"
           {...register("link")}
         />
 
         <Button
-          className="flex gap-1 flex-none rounded-lg"
+          className="flex gap-1 flex-none rounded-lg h-full"
           type="submit"
           disabled={loading}
           variant={"outline"}

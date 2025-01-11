@@ -9,7 +9,7 @@ export default function Discord({ data }: { data: any }) {
   return (
     <div className="flex flex-col gap-3 w-[68%] overflow-hidden">
       {/* app name */}
-      <div className="flex items-center gap-1 rounded-lg border bg-white w-max text-sm p-1 px-3 bg-muted/35">
+      <div className="flex items-center gap-1 rounded-lg border w-max text-sm p-1 px-3 bg-muted/35">
         <IconBrandDiscord size={16} />
         Discord
       </div>
@@ -19,8 +19,8 @@ export default function Discord({ data }: { data: any }) {
           {data.url}
         </p>
 
-        <div className="flex h-full gap-3 pr-5 rounded-lg bg-[#f5f5f5]/85 overflow-hidden md:text-lg">
-          <div className="flex h-full w-[2px] flex-none rounded-lg bg-[#d4d4d4] md:w-1" />
+        <div className="flex h-full gap-3 pr-5 rounded-lg bg-[#f5f5f5]/85 dark:bg-muted overflow-hidden md:text-lg">
+          <div className="flex h-full w-[3px] flex-none rounded-lg bg-[#d4d4d4] dark:bg-neutral-600" />
           <div className="py-4 flex flex-col gap-2">
             <p className="text-xs block">{username}</p>
             <h1 className="text-base font-semibold font-sans text-blue-600">
@@ -33,13 +33,13 @@ export default function Discord({ data }: { data: any }) {
         </div>
 
         <div className="mt-1 flex items-center gap-2">
-          <div className="flex items-center gap-1 bg-gray-200 text-center p-1 px-2 rounded-md overflow-hidden text-xs cursor-pointer">
+          <div className="flex items-center gap-1 bg-gray-200 dark:bg-muted text-center p-1 px-2 rounded-md overflow-hidden text-xs cursor-pointer">
             <span className="text-red-500">❤️</span>
-            <span className="text-gray-600">4</span>
+            <span className="text-gray-600  dark:text-muted-foreground">4</span>
           </div>
-          <div className="flex items-center gap-1 bg-gray-200 text-center p-1 px-2 rounded-md overflow-hidden text-xs cursor-pointer">
+          <div className="flex items-center gap-1 bg-gray-200 dark:bg-muted text-center p-1 px-2 rounded-md overflow-hidden text-xs cursor-pointer">
             <span>🚀</span>
-            <span className="text-gray-600">7</span>
+            <span className="text-gray-600  dark:text-muted-foreground">7</span>
           </div>
         </div>
       </div>

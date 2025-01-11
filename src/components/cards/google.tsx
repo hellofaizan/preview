@@ -10,6 +10,7 @@ export default function Google({ data }: { data: any }) {
         <IconBrandGoogle size={16} />
         Google
       </div>
+
       <div className="flex flex-col gap-2 w-full">
         <div className="flex items-center gap-[2px]">
           {data.icon && (
@@ -19,11 +20,11 @@ export default function Google({ data }: { data: any }) {
               className="w-6 h-6 rounded-full mr-2 border"
             />
           )}
-          <span className="text-sm text-gray-800 font-normal">{url}</span>
+          <span className="text-sm text-gray-800 dark:text-gray-300 font-normal">{url}</span>
         </div>
 
         <div className="flex flex-col overflow-hidden mt-2">
-          <h1 className="text-xl font-medium text-[#2763c3] truncate">
+          <h1 className="text-xl font-medium text-[#2763c3] dark:text-[#5087e0] truncate">
             {data.title}
           </h1>
 

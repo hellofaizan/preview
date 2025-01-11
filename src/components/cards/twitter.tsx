@@ -5,7 +5,7 @@ export default function Twitter({ data }: { data: any }) {
   return (
     <div className="flex flex-col gap-3 w-full">
       {/* app name */}
-      <div className="flex items-center gap-1 rounded-lg border bg-white w-max text-sm p-1 px-3 bg-muted/35">
+      <div className="flex items-center gap-1 rounded-lg border w-max text-sm p-1 px-3 bg-muted/35">
         <IconBrandX size={16} />
         Twitter
       </div>
@@ -21,7 +21,7 @@ export default function Twitter({ data }: { data: any }) {
             {data.title}
           </p>
         </div>
-        <p className="text-xs font-light text-gray-600">From {data.url}</p>
+        <p className="text-xs font-light text-gray-600 dark:text-gray-400">From {data.url}</p>
       </div>
     </div>
   );

@@ -7,12 +7,12 @@ export default function LinkedIn({ data }: { data: any }) {
   return (
     <div className="flex flex-col gap-3 w-full">
       {/* app name */}
-      <div className="flex items-center gap-1 rounded-lg border bg-white w-max text-sm p-1 px-3 bg-muted/35">
+      <div className="flex items-center gap-1 rounded-lg border w-max text-sm p-1 px-3 bg-muted/35">
         <IconBrandLinkedin size={16} />
         LinkedIn
       </div>
 
-      <div className="w-full rounded-lg shadow-sm border">
+      <div className="w-full rounded-lg shadow-sm border dark:bg-muted">
         <div className="p-4">
           {/* Header */}
           <div className="flex items-start justify-between">
@@ -24,23 +24,23 @@ export default function LinkedIn({ data }: { data: any }) {
               />
               <div>
                 <div className="flex items-center gap-1">
-                  <h2 className="font-semibold">John Doe</h2>
+                  <h2 className="font-semibold">Olivia Watkins</h2>
                   <span className="text-gray-500">• You</span>
                 </div>
-                <p className="text-xs text-gray-600">VP of a Big Company</p>
+                <p className="text-xs text-gray-600 dark:text-gray-400">VP of a Big Company</p>
                 <div className="flex items-center gap-1 text-sm text-gray-500">
                   <span>3w</span>
                   <span>•</span>
                 </div>
               </div>
             </div>
-            <button className="text-gray-600 hover:bg-gray-100 p-2 rounded-full">
+            <button className="text-gray-600 dark:text-gray-400 hover:bg-gray-100 hover:dark:bg-gray-800/80 p-2 rounded-full">
               <MoreHorizontal className="w-5 h-5" />
             </button>
           </div>
 
           {/* Content */}
-          <div className="mt-2 text-gray-700">
+          <div className="mt-2 text-gray-700 dark:text-gray-300">
             <p className=" text-sm">
               A CEO that I worked for seduced my wife in direct retaliation for
               my pushback on him at work. He won. I got divorced and left the
@@ -51,7 +51,7 @@ export default function LinkedIn({ data }: { data: any }) {
           </div>
 
           {/* Embedded Link Preview */}
-          <div className="mt-3 border rounded-lg overflow-hidden">
+          <div className="mt-3 border dark:border-white/20 rounded-lg overflow-hidden">
             <div className="flex p-2 items-center gap-2">
               <img
                 src={data.image}
@@ -60,7 +60,7 @@ export default function LinkedIn({ data }: { data: any }) {
               />
               <div className="">
                 <h3 className="font-medium text-sm">{data.title}</h3>
-                <p className="text-sm text-gray-500 mt-1">{url}</p>
+                <p className="text-sm dark:text-gray-400 text-gray-500 mt-1">{url}</p>
               </div>
             </div>
           </div>
