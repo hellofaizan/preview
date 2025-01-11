@@ -28,7 +28,7 @@ export default function SearchBar() {
   const onSubmit = async (data: formValues) => {
     setLoading(true);
 
-    await axios(`/api/metadata?url=${encodeURIComponent(data.link)}`).then(
+    await axios(`https://linkpreviewv1.vercel.app/api/metadata?url=${encodeURIComponent(data.link)}`).then(
       (res) => {
         if (res.status === 200) {
           setLoading(false);
