@@ -13,7 +13,7 @@ export default function Twitter({ data }: { data: any }) {
       <div className="flex flex-col gap-2 w-full">
         <div className="relative">
           <img
-            src={data.image}
+            src={data.img}
             className="w-full rounded-2xl border"
             alt="Image"
           />
@@ -21,7 +21,7 @@ export default function Twitter({ data }: { data: any }) {
             {data.title}
           </p>
         </div>
-        <p className="text-xs font-light text-gray-600 dark:text-gray-400">From {data.url}</p>
+        <p className="text-xs font-light text-gray-600 dark:text-gray-400">From {data.requestUrl}</p>
       </div>
     </div>
   );

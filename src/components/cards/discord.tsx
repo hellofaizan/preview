@@ -2,10 +2,7 @@ import React from "react";
 import { IconBrandDiscord } from "@tabler/icons-react";
 
 export default function Discord({ data }: { data: any }) {
-  const username = data.url
-    .split("/")
-    .pop()
-    .replace(/\.\w+$/, "");
+  const username = data.domain.replace(/\.\w+$/, "");
   return (
     <div className="flex flex-col gap-3 w-[68%] overflow-hidden">
       {/* app name */}
@@ -16,7 +13,7 @@ export default function Discord({ data }: { data: any }) {
 
       <div className="flex flex-col w-full">
         <p className="text-blue-600 hover:underline text-sm block mt-2">
-          {data.url}
+          {data.requestUrl}
         </p>
 
         <div className="flex h-full gap-3 pr-5 rounded-lg bg-[#f5f5f5]/85 dark:bg-muted overflow-hidden md:text-lg">
@@ -28,7 +25,7 @@ export default function Discord({ data }: { data: any }) {
             </h1>
             <p className="text-xs font-sans">{data.description}</p>
 
-            <img src={data.image} className="rounded-md" alt="" />
+            <img src={data.img} className="rounded-md" alt="" />
           </div>
         </div>
 

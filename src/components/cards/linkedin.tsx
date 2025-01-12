@@ -3,7 +3,7 @@ import { MoreHorizontal } from "lucide-react";
 import React from "react";
 
 export default function LinkedIn({ data }: { data: any }) {
-  const url = data.url.replace(/^https?:\/+/, "");
+  const url = data.requestUrl.replace(/^https?:\/+/, "");
   return (
     <div className="flex flex-col gap-3 w-full">
       {/* app name */}
@@ -54,7 +54,7 @@ export default function LinkedIn({ data }: { data: any }) {
           <div className="mt-3 border dark:border-white/20 rounded-lg overflow-hidden">
             <div className="flex p-2 items-center gap-2">
               <img
-                src={data.image}
+                src={data.img}
                 alt="Preview"
                 className="w-[22%] rounded-lg"
               />

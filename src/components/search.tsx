@@ -13,8 +13,7 @@ import Cards from "./cards";
 type formValues = z.infer<typeof linkSchema>;
 
 export default function SearchBar() {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [data, setData] = useState<object>();
+  const [url, setUrl] = useState<string>();
 
   const {
     handleSubmit,
@@ -26,18 +25,7 @@ export default function SearchBar() {
   });
 
   const onSubmit = async (data: formValues) => {
-    setLoading(true);
-
-    await axios(`https://linkpreviewv1.vercel.app/api/metadata?url=${encodeURIComponent(data.link)}`).then(
-      (res) => {
-        if (res.status === 200) {
-          setLoading(false);
-          setData(res.data.props);
-        } else if (res.status === 502) {
-          setLoading(false);
-        }
-      }
-    );
+    setUrl(data.link);
   };
 
   return (
@@ -53,14 +41,13 @@ export default function SearchBar() {
         <Button
           className="flex gap-1 flex-none rounded-lg h-full"
           type="submit"
-          disabled={loading}
           variant={"outline"}
         >
-          {loading ? <Loader className="animate-spin" size={15} /> : <Search />}
+          <Search />
         </Button>
       </form>
 
-      {data && <Cards data={data} />}
+      {url && <Cards url={url} />}
     </div>
   );
 }

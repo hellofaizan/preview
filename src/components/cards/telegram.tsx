@@ -17,7 +17,7 @@ export default function Telegram({ data }: { data: any }) {
           <div className="space-y-1 overflow-hidden h-full">
             {/* URL */}
             <p className="block px-2 pt-2 text-sm underline font-sans">
-              {data.url}
+              {data.requestUrl}
             </p>
 
             <div className="bg-[#fff]/15 overflow-hidden flex rounded-md m-2 px-[1px]">
@@ -26,7 +26,7 @@ export default function Telegram({ data }: { data: any }) {
                 <p className="text-xs opacity-90 mt-1">{data.description}</p>
 
                 <img
-                  src={data.image}
+                  src={data.img}
                   className="rounded-md w-full mt-1"
                   alt=""
                 />

@@ -2,7 +2,6 @@ import React from "react";
 import { IconBrandGoogle } from "@tabler/icons-react";
 
 export default function Google({ data }: { data: any }) {
-  const url = data.url.replace(/^https?:\/+/, "");
   return (
     <div className="flex flex-col gap-3 w-full">
       {/* app name */}
@@ -11,7 +10,7 @@ export default function Google({ data }: { data: any }) {
         Google
       </div>
 
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-1 w-full">
         <div className="flex items-center gap-[2px]">
           {data.icon && (
             <img
@@ -20,7 +19,7 @@ export default function Google({ data }: { data: any }) {
               className="w-6 h-6 rounded-full mr-2 border"
             />
           )}
-          <span className="text-sm text-gray-800 dark:text-gray-300 font-normal">{url}</span>
+          <span className="text-sm text-gray-800 dark:text-gray-300 font-normal">{data.domain}</span>
         </div>
 
         <div className="flex flex-col overflow-hidden mt-2">

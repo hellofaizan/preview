@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 
 export default function Facebook({ data }: { data: any }) {
-  const url = data.url.replace(/^https?:\/+/, "");
   return (
     <div className="flex flex-col gap-2 w-full">
       {/* app name */}
@@ -45,20 +44,20 @@ export default function Facebook({ data }: { data: any }) {
           </div>
 
           <p className="text-blue-600 hover:underline text-sm block mt-2">
-            {data.url}
+            {data.requestUrl}
           </p>
         </div>
 
         <div className="border-t">
           <div className="">
             <img
-              src={data.image}
+              src={data.img}
               alt="HelloFaizan"
               className="w-full object-cover"
             />
             <div className="p-2 px-3 bg-gray-200 dark:bg-neutral-700/45">
               <p className="text-gray-500 dark:text-muted-foreground text-sm tracking-wide">
-                {url}
+                {data.domain}
               </p>
               <h3 className="font-semibold font-sans">
                 {data.title}

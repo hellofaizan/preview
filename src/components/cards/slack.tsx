@@ -2,7 +2,7 @@ import { IconBrandSlack } from "@tabler/icons-react";
 import React from "react";
 
 export default function Slack({ data }: { data: any }) {
-  const username = data.url
+  const username = data.requestUrl
     .split("/")
     .pop()
     .replace(/\.\w+$/, "");
@@ -43,25 +43,20 @@ export default function Slack({ data }: { data: any }) {
                 {/* Card header */}
                 <div className="p-2 px-3 border-b">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8">
-                      <img
-                        src={data.icon}
-                        alt="Slack"
-                        className="w-full h-full"
-                      />
-                    </div>
-                    <span className="text-lg">{username}</span>
+                    <span>{username}</span>
                   </div>
                   <h2 className="text-lg font-bold text-[#1264A3] dark:text-[#4c9fde] mt-2">
                     {data.title}
                   </h2>
-                  <p className="text-gray-700 text-sm dark:text-muted-foreground mt-1">{data.description}</p>
+                  <p className="text-gray-700 text-sm dark:text-muted-foreground mt-1">
+                    {data.description}
+                  </p>
                 </div>
 
                 {/* Preview image */}
                 <div className="bg-[#F8F9FA]">
                   <img
-                    src={data.image}
+                    src={data.img}
                     alt="Slack features preview"
                     className="w-full"
                   />
