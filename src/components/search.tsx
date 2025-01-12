@@ -6,8 +6,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { linkSchema } from "@/schemas";
-import { Loader, Search } from "lucide-react";
-import axios from "axios";
+import { Search } from "lucide-react";
 import Cards from "./cards";
 
 type formValues = z.infer<typeof linkSchema>;

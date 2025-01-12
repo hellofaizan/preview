@@ -14,10 +14,20 @@ export default function Cards({ url }: { url: string }) {
   const { metadata, isLoading, isError } = useLinkPreview(url);
   const data = metadata;
 
-  if (isLoading) return <Loader className="animate-spin" />;
-  if (isError) return <TriangleAlert className="text-red-500" />;
+  if (isLoading)
+    return (
+      <div className="flex items-center justify-center w-full">
+        <Loader className="animate-spin" />
+      </div>
+    );
+  if (isError)
+    return (
+      <div className="flex items-center justify-center gap-1 w-full">
+        <TriangleAlert className="text-red-500" />
+        <p>Error Fetching metadata!</p>
+      </div>
+    );
 
-  console.log(data);
   return (
     <div className="flex flex-col gap-10 w-full">
       <Google data={data} />
